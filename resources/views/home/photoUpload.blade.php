@@ -15,6 +15,7 @@
 			<div class="card-body">
 			<div style="width:400px;height:200px;top:30%;left:20%;">
 			<form method="post" enctype="multipart/form-data">
+			{{ csrf_field() }}
 				<br/><input type="file" name="image" ><br/>
 				<input type="submit" name = "submit" value="Submit">
 				<br/>

@@ -12,6 +12,7 @@
 			</div>
 			<div class="card-body">	
 				<form method="post">
+				{{ csrf_field() }}
 					<fieldset style="width: 600px;" align="center">
 						<table style="width: 100%; padding: 15px;">
 							<tr>

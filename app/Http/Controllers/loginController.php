@@ -16,7 +16,7 @@ class loginController extends Controller
 	public function verify(Request $req){
 		$validation = Validator::make($req->all(), [
             'username'=>'required',
-            'pass'=>'required',
+            'password'=>'required',
         ]);
         if($validation->fails()){
             return back()
@@ -25,7 +25,7 @@ class loginController extends Controller
 		}
 		
 		$user = User::where('username', $req->username)
-					->where('password', $req->pass)
+					->where('password', $req->password)
 					->first();
 					
 		if(count($user) > 0 ){
@@ -37,8 +37,12 @@ class loginController extends Controller
 			return redirect()->route('home.index');
 			
 		}else{
-			$req->session()->flash('msg', 'invalid username/password');
-			//return redirect('/login');
+			$arr = array(
+				'Wrong Password!'
+			);
+			$req->session()->flash('msg', '*Invalid username/password');
+			return back();
+            
 		}
 	}
 }

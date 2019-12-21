@@ -4,6 +4,7 @@
 
 <div class="content">
 <form method="post">
+{{ csrf_field() }}
 		<div class="input-group no-border" style="width:400px">
 			<input type="text" value="" class="form-control" name="search" placeholder="Search...">
 			<button type="submit" class="btn btn-white btn-round btn-just-icon" name="btnSubmit" value="search">

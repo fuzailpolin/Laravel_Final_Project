@@ -38,6 +38,7 @@
 						<p style="color:red;">{{$err}} </p>
 					@endforeach	
 						<form method="post">
+						{{ csrf_field() }}
 							<div class="form-row m-b-55">
 								<div class="name">Name</div>
 								<div class="value">

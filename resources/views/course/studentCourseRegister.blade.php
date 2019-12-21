@@ -3,6 +3,7 @@
 
 <div class="content">
 <form method="post">
+{{ csrf_field() }}
 	<div class="user-info" align="left" style="width:1200px; left:20%">
 					<table style="width: 100%; border:1px; border-collapse: collapse;">
 						<tr>
